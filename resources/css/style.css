@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  user-select: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif, sans-serif;
+  font-size: 20px;
+  background-color: #e0edf8;
+}
+
+.row {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+/* ----------header ---------- */
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.content {
+  margin: 100px 0 0 0;
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  font-size: 200%;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2888e2;
+}
+
+p {
+  letter-spacing: 1px;
+  line-height: 145%;
+}
+
+.countdown {
+  margin: 20px 0 0 0;
+  display: flex;
+}
+
+.countdown div {
+  background-color: #ffffff;
+  width: 100px;
+  margin: 0 10px 0 0;
+  height: auto;
+  text-align: center;
+  padding: 10px 0;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+span {
+  color: #2888e2;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #2888e2;
+  margin: 20px 0 0 0;
+  color: #fff;
+  transition: top 0.5s;
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
+}
