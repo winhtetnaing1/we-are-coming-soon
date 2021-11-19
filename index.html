@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./vendors/css/normalize.css">
     <link rel="stylesheet" href="./vendors/css/grid.css">
     <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="./resources/css/query.css">
+
+
 </head>
 
 <body>
@@ -22,17 +25,17 @@
                     distinctio aliquid cum rem ipsa rerum eveniet, nobis quo illo saepe aspernatur expedita!</p>
             </div>
             <div class="countdown">
-                <div class="day">
-                    <h2>00</h2> <span>day</span>
+                <div>
+                    <h2 id="day">00</h2> <span>day</span>
                 </div>
-                <div class="hour">
-                    <h2>00</h2> <span>hour</span>
+                <div>
+                    <h2 id="hour">00</h2> <span>hour</span>
                 </div>
-                <div class="minute">
-                    <h2>00</h2> <span>minute</span>
+                <div>
+                    <h2 id="minute">00</h2> <span>minute</span>
                 </div>
-                <div class="second">
-                    <h2>00</h2> <span>second</span>
+                <div>
+                    <h2 id="second">00</h2> <span>second</span>
                 </div>
             </div>
             <a href="" class="btn">notify me</a>
@@ -41,6 +44,37 @@
             <img class="logo" src="./resources/img/Create-bro.svg" alt="">
         </div>
     </div>
+
+
+    <script>
+
+        const countDate = new Date('jan1, 2022 00:00:00').getTime();
+
+        function countDown() {
+            const now = new Date().getTime()
+            const gap = countDate - now
+
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24
+
+            const d = Math.floor(gap / (day));
+            const h = Math.floor((gap % (day)) / hour);
+            const m = Math.floor((gap % (hour)) / minute);
+            const s = Math.floor((gap % (minute)) / second);
+
+
+            document.getElementById('day').innerText = d;
+            document.getElementById('minute').innerText = m;
+            document.getElementById('second').innerText = s;
+            document.getElementById('hour').innerText = h;
+
+        }
+        setInterval(async () => {
+            await countDown()
+        }, 1000)
+    </script>
 </body>
 
 </html>

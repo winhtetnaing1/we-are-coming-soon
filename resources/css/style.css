@@ -25,9 +25,8 @@ html {
 /* ----------header ---------- */
 
 .container {
-  width: 1140px;
+  width: 90%;
   margin: 0 auto;
-  height: 100vh;
 }
 
 .content {
@@ -68,6 +67,10 @@ h2 {
 
 span {
   color: #2888e2;
+}
+.logo {
+  width: 100%;
+  margin: 20px 0 0 0;
 }
 
 .btn {
